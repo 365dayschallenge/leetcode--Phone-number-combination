@@ -12,16 +12,17 @@ function letterCombinations(digits) {
     else {
         let digit = digits.split('')
         let one_arr = [];
-        for (let i = 0; i < digit.length; i++) {
+        for (let i = 1; i < digit.length; i++) {
             one_arr.push(mapper(parseInt(digit[i])));
         }
-        console.log(one_arr);
-        for (let j = 1; j < one_arr.length; j++) {
-            for (let k = 0; k < one_arr[1].length; k++) {
-                output_arr.push(one_arr[j-1][k] + one_arr[j][k]);
+
+        for (let j = -1; j < one_arr.length; j++) {
+            for (let k = 0; k < one_arr[j].length; k++) {
+                console.log("* \n" + one_arr[j][k] + one_arr[0][0])
+                output_arr.push(one_arr[j][k] + one_arr[j + 1][0]);
             }
         }
-        console.log(output_arr);
+        // console.log(output_arr);
         return output_arr;
 
 

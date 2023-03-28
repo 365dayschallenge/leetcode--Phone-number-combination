@@ -1,5 +1,5 @@
 
-letterCombinations("35");
+letterCombinations("359");
 function letterCombinations(digits) {
 
     let output_arr = [];
@@ -16,9 +16,9 @@ function letterCombinations(digits) {
             one_arr.push(mapper(parseInt(digit[i])));
         }
         console.log(one_arr);
-        for (let j = 1; j < one_arr.length; j++) {
-            for (let k = 0; k < one_arr[1].length; k++) {
-                output_arr.push(one_arr[j-1][k] + one_arr[j][k]);
+        for (let j = 0; j < one_arr.length; j++) {
+            for (let k = 0; k < one_arr[j].length; k++) {
+                output_arr.push(one_arr[j][k] + one_arr[2][k]);
             }
         }
         console.log(output_arr);

@@ -11,22 +11,30 @@ function letterCombinations(digits) {
     }
     else {
         let digit = digits.split('')
+        console.log(digit.length)
         let one_arr = [];
-        for (let i = 0; i < digit.length; i++) {
+        for (let i = 0; i < digit.length; i++){
             one_arr.push(mapper(parseInt(digit[i])));
+            // one_arr = mapper(parseInt(digit[1]));
+            console.log(one_arr);
+            for (let j = 0; j < one_arr.length; j++){
+                let temp = one_arr[j];
+                // console.log(temp);
+                for (let k = 0; k < one_arr[0].length; k++){
+                    if (j != k){
+                        temp += one_arr[k];
+                        output_arr.push(temp);
+                    }
+                }
+            }
+            return output_arr;
+            
         }
         console.log(one_arr);
-        for (let j = 1; j < one_arr.length; j++) {
-            for (let k = 0; k < one_arr[1].length; k++) {
-                output_arr.push(one_arr[j-1][k] + one_arr[j][k]);
-            }
-        }
-        console.log(output_arr);
-        return output_arr;
 
 
-// [ [ 'd', 'e', 'f' ], [ 'j', 'k', 'l' ] ]
 
+      
     }
 
 
@@ -52,6 +60,6 @@ function mapper(digit) {
         case 9:
             return ["w", "x", "y", "z"]
         default:
-            return
+            return 
     }
 }
