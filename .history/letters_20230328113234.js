@@ -13,11 +13,12 @@ function letterCombinations(digits) {
         let digit = digits.split('')
         for (let i = 0; i < length; i++){
             let one_arr = mapper(parseInt(digit[i]));
-            console.log(one_arr);
+            strings.push(one_arr);
 
         }
 
 
+console.log(strings);
       
     }
 

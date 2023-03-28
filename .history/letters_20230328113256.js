@@ -18,6 +18,7 @@ function letterCombinations(digits) {
         }
 
 
+console.log(strings);
       
     }
 

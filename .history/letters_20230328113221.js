@@ -10,14 +10,16 @@ function letterCombinations(digits) {
         return output_arr;
     }
     else {
+        let return [];
         let digit = digits.split('')
         for (let i = 0; i < length; i++){
             let one_arr = mapper(parseInt(digit[i]));
-            console.log(one_arr);
+            strings.push(one_arr);
 
         }
 
 
+console.log(strings);
       
     }
 
