@@ -50,9 +50,6 @@ function letterCombinations(digits) {
 
             }
         }
-        if (one_arr.length == 1) { 
-            return one_arr[0];
-        }
         for (let j = 1; j < one_arr.length; j++) {
             for (let k = 0; k < one_arr[j].length; k++) {
                 output_arr.push(one_arr[j - 1][j - 1] + one_arr[j][k], one_arr[j - 1][j] + one_arr[j][k], one_arr[j - 1][j+1] + one_arr[j][k]);
