@@ -17,9 +17,8 @@ function letterCombinations(digits) {
         }
     }
     dfs(0, '');
-    console.log(result);
     return result;
-
+    
 
 
 };
